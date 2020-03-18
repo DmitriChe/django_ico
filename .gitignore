@@ -1,4 +1,5 @@
 github_token
+db.sqlite3
 revolucion/db.sqlite3
 # Project exclude paths
 /venv/
