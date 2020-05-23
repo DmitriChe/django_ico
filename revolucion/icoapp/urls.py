@@ -7,6 +7,7 @@ app_name = 'icoapp'
 # связываем вьюшки с адресами
 urlpatterns = [
     path('', views.main_view, name='index'),
-    # path('create/', views.create_post, name='create'),
-    # path('post/<int:id>/', views.post, name='post')
+    path('about/', views.about_view, name='about'),
+    path('parse/', views.parse_view, name='parse'),
+    path('result/', views.result_view, name='result'),
 ]

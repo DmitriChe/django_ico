@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+  RESULT
+{% endblock %}
+
+{% block content %}
+  <!-- Result Section -->
+  <section id="result" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5"><strong>РЕЗУЛЬТАТ ОБРАБОТКИ ЗАПРОСА:</strong></h2>
+
+
+          {% if icos %}
+          <table class="table table-bordered table-dark">
+              <tr>
+                  <th>Номер</th>
+                  <th>Название</th>
+                  <th>Описание</th>
+                  <th>Дата начала</th>
+                  <th>Дата окончания</th>
+                  <th>Рейтинг</th>
+                  <th>Ссылка</th>
+              </tr>
+                {% for item in icos %}
+                  <tr>
+                      <td>{{item.index}}</td>
+                      <td>{{item.name}}</td>
+                      <td>{{item.description}}</td>
+                      <td>{{item.starts}}</td>
+                      <td>{{item.ends}}</td>
+                      <td>{{item.rating}}</td>
+                      <td><a href="{{item.url}}">{{item.url}}</a></td>
+                  </tr>
+                {% endfor %}
+          </table>
+
+          {% else %}
+              <p class="text-white mb-5">Нет данных!</p>
+          {% endif %}
+
+          <br>
+          <a href="{% url 'icoapp:index' %}" class="btn btn-secondary js-scroll-trigger">На главную</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
