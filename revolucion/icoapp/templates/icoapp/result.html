@@ -10,15 +10,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
           <h2 class="text-white mb-5"><strong>РЕЗУЛЬТАТ ОБРАБОТКИ ЗАПРОСА:</strong></h2>
 
 
-          {% if icos %}
+          {% if ico %}
           <table class="table table-bordered table-dark">
               <tr>
-                  <th>Номер</th>
+                  <th>ID</th>
                   <th>Название</th>
                   <th>Описание</th>
                   <th>Дата начала</th>
@@ -26,10 +24,12 @@
                   <th>Рейтинг</th>
                   <th>Ссылка</th>
               </tr>
-                {% for item in icos %}
+                {% for item in ico %}
                   <tr>
-                      <td>{{item.index}}</td>
-                      <td>{{item.name}}</td>
+                      <td>{{item.id}}</td>
+                      <td>
+                          <a href="{% url 'icoapp:detail' pk=item.pk %}">{{item.name}}</a>
+                      </td>
                       <td>{{item.description}}</td>
                       <td>{{item.starts}}</td>
                       <td>{{item.ends}}</td>

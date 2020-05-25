@@ -1,13 +1,18 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.db import models
 from .models import Ico
-from .forms import NumberofPagesForm
+from .forms import NumeroPagesForm
 from django.core.mail import send_mail
 from icoapp.models import Ico
 
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
+
+from django.views.generic import View, ListView, UpdateView, CreateView, DetailView, DeleteView, FormView
+from django.views.generic.base import TemplateView, ContextMixin
+from .models import Ico
 
 
 # получение максимального числа страниц с данными ico
@@ -69,52 +74,49 @@ def parse_icos_to_db(page_num):
 
 
 # Create your views here.
-def main_view(request):
-    return render(request, 'icoapp/index.html')
+class MainTemplateView(TemplateView):
+    template_name = 'icoapp/index.html'
 
 
-def about_view(request):
-    return render(request, 'icoapp/about.html')
+class AboutTemplateView(TemplateView):
+    template_name = 'icoapp/about.html'
 
 
-def parse_view(request):
+class IcoParse(FormView):
 
-    if request.method == 'POST':  # если данные переданы методом пост, т.е. через форму, то
-        form = NumberofPagesForm(request.POST)  # получаем форму и загружаем в нее данные POST запроса (в виде словаря)
-        if form.is_valid():
+    form_class = NumeroPagesForm
+    template_name = 'icoapp/parse.html'
+    success_url = reverse_lazy('icoapp:result')
 
-            # получаем данные из формы
-            num_of_pages = form.cleaned_data['npages']
-            print(f'Получен запрос отпарсить первые {num_of_pages} страниц.')
-
-            # парсим указанное число страниц и сохраняем в БД
-            parse_icos_to_db(num_of_pages)
-
-            all_icos = Ico.objects.all()
-            # pprint.pprint(ico_data_dict)
-            for item in all_icos:
-                print(item.id, item.name, item.rating, item.url)
-
-            send_mail(
-                'Contact message',
-                f'Запрос отпарсить {num_of_pages} страниц принят!',
-                'from@example.com',
-                ['email@email.ru'],
-                fail_silently=True,  # если что не так - молчок!
-            )
-            # и после отправки письма делаем переход на начальную страницу
-            return HttpResponseRedirect(reverse('icoapp:result'))
-        else:
-            return render(request, 'icoapp/about.html')
-
-    else:
-        form = NumberofPagesForm()
-        return render(request, 'icoapp/parse.html', context={'form': form})
+    def form_valid(self, form):
+        num_of_pages = form.cleaned_data['npages']
+        total_pages = get_number_of_pages()
+        parse_icos_to_db(num_of_pages)
+        return super().form_valid(form)
 
 
-def result_view(request):
-    icos = Ico.objects.all()  # берем все запси из модели Ico и передаем их в контексте в шаблон (т.е. на страницу)
-    return render(request, 'icoapp/result.html', context={'icos': icos})
+class ResultListView(ListView):
+    model = Ico
+    context_object_name = 'ico'
+    template_name = 'icoapp/result.html'
 
 
+class IcoDetailView(DetailView):
+    model = Ico
+    context_object_name = 'ico'
+    template_name = 'icoapp/detail.html'
+
+
+class IcoUpdateView(UpdateView):
+    fields = '__all__'
+    model = Ico
+    template_name = 'icoapp/update.html'
+    success_url = reverse_lazy('icoapp:result')
+
+
+class IcoDeleteView(DeleteView):
+    model = Ico
+    context_object_name = 'ico'
+    template_name = 'icoapp/delete_confirm.html'
+    success_url = reverse_lazy('icoapp:result')
 

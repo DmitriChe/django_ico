@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-class NumberofPagesForm(forms.Form):
+class NumeroPagesForm(forms.Form):
 
     # получение максимального числа страниц с данными ico
     def get_number_of_pages(url='https://icobench.com/icos?'):
@@ -20,4 +20,7 @@ class NumberofPagesForm(forms.Form):
 
     total_pages = get_number_of_pages()
 
-    npages = forms.IntegerField(label=f'Введите число страниц от 1 до {total_pages}:')
+    npages = forms.IntegerField(label=f'Введите число страниц от 1 до {total_pages}:',
+                                widget=forms.TextInput(attrs={'placeholder': f'Введите число страниц от 1 до {total_pages}',
+                                                              'class': 'form-control'}))
+
