@@ -45,9 +45,19 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'icoapp:result' %}">Результаты</a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'users:logout' %}">Выход</a>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'users:login' %}">Вход</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'users:register' %}">Регистрация</a>
+          </li>
+          {% endif %}
+
         </ul>
       </div>
     </div>

@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.db import models
@@ -82,7 +83,8 @@ class AboutTemplateView(TemplateView):
     template_name = 'icoapp/about.html'
 
 
-class IcoParse(FormView):
+# права на парсин только у залогиненых пользователей
+class IcoParse(LoginRequiredMixin, FormView):
 
     form_class = NumeroPagesForm
     template_name = 'icoapp/parse.html'
@@ -107,16 +109,31 @@ class IcoDetailView(DetailView):
     template_name = 'icoapp/detail.html'
 
 
-class IcoUpdateView(UpdateView):
+# права на измение записей об ico только у админа
+class IcoUpdateView(UserPassesTestMixin, UpdateView):
     fields = '__all__'
     model = Ico
     template_name = 'icoapp/update.html'
     success_url = reverse_lazy('icoapp:result')
 
+    # права на редактирование только у админа
+    def test_func(self):
+        return self.request.user.is_superuser
 
-class IcoDeleteView(DeleteView):
+    # def form_valid(self, form):
+    #     # self.request.user - текущий пользователь
+    #     form.instance.user = self.request.user
+    #     return super().form_valid(form)
+
+
+# для удаления нужно быть админом
+class IcoDeleteView(UserPassesTestMixin, DeleteView):
     model = Ico
     context_object_name = 'ico'
     template_name = 'icoapp/delete_confirm.html'
     success_url = reverse_lazy('icoapp:result')
+
+    # права на удаление только у админа
+    def test_func(self):
+        return self.request.user.is_superuser
 

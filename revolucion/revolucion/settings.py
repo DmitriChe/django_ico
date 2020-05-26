@@ -138,3 +138,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # переназначение модели пользователя на нашу, расширенную
 AUTH_USER_MODEL = 'usersapp.NewUser'
 
+LOGIN_REDIRECT_URL = '/'  # куда идти после логина
+LOGOUT_REDIRECT_URL = '/'  # куда идти после логаута
+LOGIN_URL = '/users/login/'  # куда направлять на логин, если нет прав

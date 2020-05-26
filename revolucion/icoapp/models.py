@@ -11,7 +11,7 @@ class Ico(models.Model):
     ends = models.CharField(max_length=16)
     rating = models.FloatField()
     url = models.URLField()
-    user = models.ForeignKey(NewUser, on_delete=models.CASCADE)
+    # user = models.ForeignKey(NewUser, on_delete=models.CASCADE)
     # user = models.ForeignKey(NewUser, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
