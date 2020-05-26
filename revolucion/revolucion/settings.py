@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'icoapp'
+    'icoapp',
+    'usersapp'
 ]
 
 MIDDLEWARE = [
@@ -50,12 +51,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# расположение файла указателей url (uniform resource locator)
 ROOT_URLCONF = 'revolucion.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # путь к базовому шаблону
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +70,7 @@ TEMPLATES = [
     },
 ]
 
+# расположение файла для веб-сервера
 WSGI_APPLICATION = 'revolucion.wsgi.application'
 
 
@@ -120,3 +123,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp/emails')  # change this to a proper location
+
+# переназначение модели пользователя на нашу, расширенную
+AUTH_USER_MODEL = 'usersapp.NewUser'
+
+LOGIN_REDIRECT_URL = '/'  # куда идти после логина
+LOGOUT_REDIRECT_URL = '/'  # куда идти после логаута
+LOGIN_URL = '/users/login/'  # куда направлять на логин, если нет прав

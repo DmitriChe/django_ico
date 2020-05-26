@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+  RESULT
+{% endblock %}
+
+{% block content %}
+  <!-- Result Section -->
+  <section id="result" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <a href="{{ico.url}}">
+            <h1 class="text-white mb-5"><strong>{{ ico.name }}:</strong></h1>
+          </a>
+
+          {% if ico %}
+            <p class="text-white mb-5">Рейтинг : {{ico.rating}}</p>
+            <a href="{{ico.url}}">
+                <h3 class="text-white mb-5">{{ico.description}}</h3>
+            </a>
+            <p class="text-white mb-5">{{ico.starts}} - {{ico.ends}}</p>
+          {% else %}
+              <p class="text-white mb-5">Нет данных!</p>
+          {% endif %}
+
+          <br>
+          <a href="{% url 'icoapp:result' %}" class="btn btn-secondary js-scroll-trigger">Обратно</a>
+            <a href="{% url 'icoapp:delete' pk=ico.pk%}" class="btn btn-secondary js-scroll-trigger">Удалить</a>
+            <a href="{% url 'icoapp:update' pk=ico.pk%}" class="btn btn-secondary js-scroll-trigger">Изменить</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
