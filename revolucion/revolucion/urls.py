@@ -22,7 +22,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # конструирование путей к вьюшкам по полученным урлам в адресной строке:
-    path('', include('icoapp.urls', namespace='icoapp'))  # "переадресация" на файл urls из созданных нами приложений
+    path('', include('icoapp.urls', namespace='icoapp')),  # "переадресация" на файл urls приложения icoapp
+    # path('users', include('usersapp.urls', namespace='userapp'))  # "переадресация" на файл urls приложения usersapp
+    path('users/', include('usersapp.urls', namespace='users'))  # "переадресация" на файл urls приложения usersapp
 ]
 
 # конструкция для того, чтобы джанго нормально находил папку с media

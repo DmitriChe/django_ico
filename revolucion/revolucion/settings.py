@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'icoapp'
+    'icoapp',
+    'usersapp'
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp/emails')  # change this to a proper location
+
+# переназначение модели пользователя на нашу, расширенную
+AUTH_USER_MODEL = 'usersapp.NewUser'
+
