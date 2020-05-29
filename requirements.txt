@@ -6,3 +6,5 @@ requests==2.22.0
 urllib3==1.25.7
 bs4
 pprint
+Faker
+mixer

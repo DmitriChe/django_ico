@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load textstyle_extras %}
 
 {% block title %}
   RESULT
@@ -10,7 +11,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <h2 class="text-white mb-5"><strong>РЕЗУЛЬТАТ ОБРАБОТКИ ЗАПРОСА:</strong></h2>
+          <h2 class="text-white mb-5"><strong>{{title|alfajumper}}:</strong></h2>
 
 
           {% if ico %}

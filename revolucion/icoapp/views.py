@@ -40,6 +40,10 @@ class ResultListView(ListView):
     context_object_name = 'ico'
     paginate_by = 5
     template_name = 'icoapp/result.html'
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'результат обработки запроса'
+        return context
 
 
 class IcoDetailView(DetailView):
