@@ -38,6 +38,7 @@ class IcoParse(LoginRequiredMixin, FormView):
 class ResultListView(ListView):
     model = Ico
     context_object_name = 'ico'
+    paginate_by = 5
     template_name = 'icoapp/result.html'
 
 
