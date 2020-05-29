@@ -19,6 +19,16 @@ def get_number_of_pages(url='https://icobench.com/icos?'):
     return max_page_num
 
 
+def count_ico_period(starts, ends):
+    if starts == 'Unknown' or ends == 'Unknown':
+        return 0
+    else:
+        date_start = datetime.strptime(starts, "%d %b %Y")
+        date_end = datetime.strptime(ends, "%d %b %Y")
+        delta = date_end - date_start
+        return delta.days
+
+
 # Парсинг данных с ico-сайта в базу данных
 def parse_icos_to_db(page_num):
     domain = 'https://icobench.com'
@@ -50,8 +60,9 @@ def parse_icos_to_db(page_num):
             ico_start_date = ico_dates[0].text
             ico_end_date = ico_dates[1].text
             ico_rating = item.find('div', class_='rate').text
-            print(f'{ico_name}: {ico_url}\n{ico_description}')
-            print(f'start date: {ico_start_date}\nend date: {ico_end_date}\nrating: {ico_rating}\n')
+            ico_period = count_ico_period(ico_start_date, ico_end_date)
+            # print(f'{ico_name}: {ico_url}\n{ico_description}')
+            # print(f'start date: {ico_start_date}\nend date: {ico_end_date}\nrating: {ico_rating}\n')
 
             # Запуск на исполнение запроса на добавление данных в БД
             Ico.objects.create(
@@ -59,18 +70,27 @@ def parse_icos_to_db(page_num):
                 description=ico_description,
                 starts=ico_start_date,
                 ends=ico_end_date,
+                days=ico_period,
                 rating=ico_rating,
                 url=ico_url
             )
 
 
+class IsActiveMixin(models.Model):
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        abstract = True
+
+
 # Create your models here.
-class Ico(models.Model):
+class Ico(IsActiveMixin):
     # id создается автомитически
     name = models.CharField(max_length=16, unique=True)
     description = models.TextField()
     starts = models.CharField(max_length=16)
     ends = models.CharField(max_length=16)
+    days = models.IntegerField()
     rating = models.FloatField()
     url = models.URLField()
     # user = models.ForeignKey(NewUser, on_delete=models.CASCADE)
