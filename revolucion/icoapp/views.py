@@ -43,7 +43,14 @@ class ResultListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        # создаем в словаре контекста заголовок для передачи в шаблон result.html
         context['title'] = 'результат обработки запроса'
+        # строкa ниже лишние - они для создания дублирования обращений к БД
+        context['icoco'] = Ico
+        # ...
+        # icos = list(Ico.get_all_icos)
+        # for ico in icos:
+        #     print(ico)
         return context
 
     def get_queryset(self):

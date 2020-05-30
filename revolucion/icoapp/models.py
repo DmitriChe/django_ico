@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.functional import cached_property
+
 from usersapp.models import NewUser
 from time import sleep
 from bs4 import BeautifulSoup
@@ -95,6 +97,12 @@ class Ico(IsActiveMixin):
     url = models.URLField()
     # user = models.ForeignKey(NewUser, on_delete=models.CASCADE)
     # user = models.ForeignKey(NewUser, on_delete=models.CASCADE, null=True, blank=True)
+
+    # лишний метод для решения проблемы дублирования (оптимизация)
+    # @cached_property
+    def get_all_icos(self):
+        icoco = Ico.objects.all()
+        return icoco
 
     def __str__(self):
         return self.name
