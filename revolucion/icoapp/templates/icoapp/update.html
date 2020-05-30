@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+  RESULT
+{% endblock %}
+
+{% block content %}
+  <!-- Result Section -->
+  <section id="result" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          {% if ico %}
+          <h1 class="text-white mb-5"><strong>{{ ico.name }} - ред.?</strong></h1>
+          {% else %}
+              <p class="text-white mb-5">Нет данных!</p>
+          {% endif %}
+
+          <br>
+          <form method="post">
+            {% csrf_token %}
+              {% for field in form %}
+              <span class="text-white mb-5">&bull; {{field.name}} &bull;</span>
+
+              <p>{{field}}</p>
+              <hr>
+              {% endfor %}
+
+            <a href="{% url 'icoapp:result' %}" class="btn btn-secondary js-scroll-trigger">Я передумал:)</a>
+            <button type="submit" class="btn btn-secondary js-scroll-trigger">Изменить!</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

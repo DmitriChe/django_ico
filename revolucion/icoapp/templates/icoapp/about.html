@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+  ABOUT
+{% endblock %}
+
+{% block content %}
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4"><strong>Парсер ICO на icobench.com</strong></h2>
+          <p class="text-white-50">Данный парсер - это онлайн программа для получения данных о криптовалютах ICO.
+            <br>Не оставляйте шанса биткоину:<br> <a href="{% url 'icoapp:parse' %}">:: опробовать парсер ::</a></p>
+        </div>
+      </div>
+      <img src="/static/img/ipad.png" class="img-fluid" alt="">
+    </div>
+  </section>
+{% endblock %}
+
