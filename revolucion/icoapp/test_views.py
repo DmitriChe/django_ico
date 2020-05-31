@@ -37,13 +37,13 @@ class OpenViewsTest(TestCase):
         response = self.client.get('/no_page/')
         self.assertEqual(response.status_code, 404)
 
-        response = self.client.get(f'/detail/{self.get_id()}')
+        response = self.client.get('/detail/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
-        response = self.client.get(f'/update/{self.get_id()}')
+        response = self.client.get('/update/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
-        response = self.client.get(f'/delete/{self.get_id()}')
+        response = self.client.get('/delete/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
     def test_user_login_statuses(self):
@@ -51,13 +51,13 @@ class OpenViewsTest(TestCase):
         NewUser.objects.create_user(username='tuser', email='tuser@tuser.tu', password='tuser1234567')
         self.client.login(username='tuser', password='tuser1234567')
 
-        response = self.client.get(f'/detail/{self.get_id()}')
+        response = self.client.get('/detail/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
-        response = self.client.get(f'/update/{self.get_id()}')
+        response = self.client.get('/update/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
-        response = self.client.get(f'/delete/{self.get_id()}')
+        response = self.client.get('/delete/{}'.format(self.get_id()))
         self.assertEqual(response.status_code, 301)
 
         # self.client.logout()

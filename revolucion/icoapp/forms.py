@@ -15,12 +15,12 @@ class NumeroPagesForm(forms.Form):
             print(num)
         print('Все!')
         max_page_num = max([int(num.text) for num in soup.find_all('a', class_='num')])
-        print(f'number of pages: {max_page_num}')
+        print('number of pages: {}'.format(max_page_num))
         return max_page_num
 
     total_pages = get_number_of_pages()
 
-    npages = forms.IntegerField(label=f'Введите число страниц от 1 до {total_pages}:',
-                                widget=forms.TextInput(attrs={'placeholder': f'Введите число страниц от 1 до {total_pages}',
+    npages = forms.IntegerField(label='Введите число страниц от 1 до {}:'.format(total_pages),
+                                widget=forms.TextInput(attrs={'placeholder': 'Введите число страниц от 1 до {}'.format(total_pages),
                                                               'class': 'form-control'}))
 
