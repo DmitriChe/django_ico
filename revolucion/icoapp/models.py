@@ -86,7 +86,7 @@ class IsActiveMixin(models.Model):
 # Create your models here.
 class Ico(IsActiveMixin):
     # id создается автомитически
-    name = models.CharField(max_length=16, unique=True)
+    name = models.CharField(max_length=32, unique=True)
     description = models.TextField()
     starts = models.CharField(max_length=16)
     ends = models.CharField(max_length=16)
