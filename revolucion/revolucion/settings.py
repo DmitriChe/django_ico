@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'icoapp',
     'usersapp',
-    'textstyleapp'
+    'textstyleapp',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
