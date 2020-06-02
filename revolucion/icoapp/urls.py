@@ -16,5 +16,5 @@ urlpatterns = [
     path('result/', views.ResultListView.as_view(), name='result'),
     path('detail/<int:pk>/', views.IcoDetailView.as_view(), name='detail'),
     path('delete/<int:pk>/', views.IcoDeleteView.as_view(), name='delete'),
-    path('update/<int:pk>/', views.IcoUpdateView.as_view(), name='update')
+    path('update/<int:pk>/', views.IcoUpdateView.as_view(), name='update'),
 ]

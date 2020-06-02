@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'icoapp',
     'usersapp',
     'textstyleapp',
+    'rest_framework',
+    # django_cleanup должен быть самым псоледним!
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -144,3 +146,10 @@ AUTH_USER_MODEL = 'usersapp.NewUser'
 LOGIN_REDIRECT_URL = '/'  # куда идти после логина
 LOGOUT_REDIRECT_URL = '/'  # куда идти после логаута
 LOGIN_URL = '/users/login/'  # куда направлять на логин, если нет прав
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
