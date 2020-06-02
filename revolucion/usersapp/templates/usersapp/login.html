@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+  RESULT
+{% endblock %}
+
+{% block content %}
+  <!-- Result Section -->
+  <section id="result" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <h3 class="text-white mb-5"><strong>ОСТАВЬ НАДЕЖДУ ВСЯК СЮДА ВХОДЯЩИЙ:</strong></h3>
+
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <span class="text-white mb-5">&bull; {{field.name}} &bull;</span>
+                <p>{{field}}</p>
+                <hr>
+                {% endfor %}
+                <button type="submit" class="btn btn-secondary js-scroll-trigger">Войти</button>
+            </form>
+
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
