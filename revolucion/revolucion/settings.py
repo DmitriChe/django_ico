@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'icoapp',
     'usersapp',
     'textstyleapp',
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 # расположение файла указателей url (uniform resource locator)
@@ -148,6 +150,9 @@ LOGIN_REDIRECT_URL = '/'  # куда идти после логина
 LOGOUT_REDIRECT_URL = '/'  # куда идти после логаута
 LOGIN_URL = '/users/login/'  # куда направлять на логин, если нет прав
 
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
