@@ -6,7 +6,8 @@
 
 {% block content %}
   <!-- Projects Section -->
-  <section id="parse" class="projects-section bg-light">
+
+  <section id="parse" class="projects-section bg-light signup-section">
     <div class="container">
 
       <!-- Featured Project Row -->
@@ -15,18 +16,10 @@
           <img class="img-fluid mb-3 mb-lg-0" src="/static/img/bg-masthead.jpg" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
-            <h4>ФОРМА ДЛЯ ICO ПАРСИНГА</h4>
-            <p class="text-black-50 mb-0">Заполните форму и получите данные о криптоволютах ICO!</p>
+          <div class="featured-text text-center">
+            <h2 class="text-white mb-4"><b>ФОРМА ДЛЯ ICO ПАРСИНГА</b></h2>
+            <p class="text-white-50 mb-0">Заполните форму и получите данные о криптоволютах ICO!</p>
             <br>
-<!--                <form action="#result" method="post" id="numberofpages">-->
-<!--                    {% csrf_token %}-->
-<!--                    <input class="form-control" type="number" name="num_pages" placeholder="введите число страниц от 1 до {{number_of_pages}}" min="1" max="{{number_of_pages}}">-->
-<!--                    <br>-->
-<!--                    <button type="submit" class="btn btn-primary" id="sendMessageButton">Парсить</button>-->
-<!--&lt;!&ndash;                    <input type="submit" value="Парсить" class="btn btn-primary">&ndash;&gt;-->
-<!--                </form>-->
-
                 <form method="post" id="contactForm">
                     {% csrf_token %}
                     {{ form.as_p }}
