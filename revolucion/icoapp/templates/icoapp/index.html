@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+  ICOPARSER
+{% endblock %}
+
+{% block content %}
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">ICOPARSER</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Бесплатный парсер ICO с сайта <a href="https:\\icobench.com">icobench.com</a>!!!</h2>
+        <a href="{% url 'icoapp:about' %}" class="btn btn-primary js-scroll-trigger">Подробнее о программе</a>
+      </div>
+    </div>
+  </header>
+{% endblock %}

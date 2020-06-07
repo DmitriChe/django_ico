@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+  RESULT
+{% endblock %}
+
+{% block content %}
+  <!-- Result Section -->
+  <section id="result" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          {% if ico %}
+          <h1 class="text-white mb-5"><strong><s>{{ ico.name }}</s> - ?</strong></h1>
+          <p class="text-white mb-5">(Вы точно хотите удалить такой <em>милый</em> {{ ico.name }}???           <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+)</p>
+          {% else %}
+              <p class="text-white mb-5">Нет данных!</p>
+          {% endif %}
+
+          <br>
+          <form method="post">
+            {% csrf_token %}
+            <a href="{% url 'icoapp:result' %}" class="btn btn-secondary js-scroll-trigger">Я же не зверь...</a>
+            <button type="submit" class="btn btn-secondary js-scroll-trigger">Да, удалить!</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

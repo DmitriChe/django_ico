@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a94de8c9-0ac9-43c5-955b-57a2537dac37" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revolucion/revolucion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/revolucion/revolucion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revolucion/revolucion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/revolucion/revolucion/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="branch_30_api" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cRY1QpRGjVeTqFgtOTX0HTv2sk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/revolucion/static/js" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IT\PycharmProjects\django_23\revolucion\icoapp\templates\icoapp" />
+      <recent name="E:\IT\PycharmProjects\django_23\revolucion\icoapp" />
+      <recent name="E:\IT\PycharmProjects\django_23\revolucion\usersapp\templates\usersapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IT\PycharmProjects\django_23\revolucion\static\js" />
+      <recent name="E:\IT\PycharmProjects\django_23\revolucion\usersapp\templates\usersapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.api_request">
+    <configuration name="api_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/revolucion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/revolucion/api_request.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prosto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/revolucion/icoapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/revolucion/icoapp/prosto.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/revolucion/icoapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/revolucion/icoapp/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/revolucion/icoapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/revolucion/icoapp/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_views.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/revolucion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/revolucion/icoapp/test_views.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.api_request" />
+        <item itemvalue="Python tests.Unittests in test_views.py" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.prosto" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a94de8c9-0ac9-43c5-955b-57a2537dac37" name="Default Changelist" comment="" />
+      <created>1590492657273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590492657273</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1590496146177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590496146177</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <created>1590496240907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590496240907</updated>
+    </task>
+    <task id="LOCAL-00003" summary="final hw23 - добавлена новая модель пользователя, аутентификация и права доступа: парсить в базу может только залогиненный пользоавтель, а редактировать и удалять записи только АДМИН!">
+      <created>1590504124409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590504124409</updated>
+    </task>
+    <task id="LOCAL-00004" summary="final hw24 - Добавлены тесты на бизнес-логику и на вьюшки (коды статуса страниц). Проблема с залогиниванием пользователя.">
+      <created>1590661165974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590661165974</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial hw24 - Добавлена пагинация.">
+      <created>1590758129142</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590758129142</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initial hw26 - добавлена пиганация и фильтр заголовка - &quot;прагающие буквы&quot;, реализованный в виде отдельного приложения">
+      <created>1590764703034</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590764703034</updated>
+    </task>
+    <task id="LOCAL-00007" summary="initial hw26 - добавлена пиганация; создан фильтр заголовка - &quot;прагающие буквы&quot;, реализованный в виде отдельного приложения; добавлен менеджер моделей для активации записей Ico; в модели Ico реализоно вычисление периода действия в днях и выведено на страницы">
+      <created>1590769966645</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590769966645</updated>
+    </task>
+    <task id="LOCAL-00008" summary="final hw26 - добавлена пиганация; создан фильтры capitalize для заголовка на странице results.html и фильтр alfajumper (&quot;прагающие буквы&quot;) для заповедей блаженств - фильтры реализованны в виде отдельного приложения textstylesapp; добавлен менеджер моделей для активации записей Ico; в модели Ico реализоно вычисление периода действия в днях и выведено на страницы; реализовано создание профиля пользователя по событию post_save; реализован контекстный процессор, генерирующий случайным образом одну из заповедей блаженств нагорной проповеди Христа с выводом в подвал базового шаблона base.html">
+      <created>1590774861149</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590774861149</updated>
+    </task>
+    <task id="LOCAL-00009" summary="final hw26 - добавлена пиганация; создан фильтры capitalize для заголовка на странице results.html и фильтр alfajumper (&quot;прагающие буквы&quot;) для заповедей блаженств - фильтры реализованны в виде отдельного приложения textstylesapp; добавлен менеджер моделей для активации записей Ico; в модели Ico реализоно вычисление периода действия в днях и выведено на страницы; реализовано создание профиля пользователя по событию post_save; реализован контекстный процессор, генерирующий случайным образом одну из заповедей блаженств нагорной проповеди Христа с выводом в подвал базового шаблона base.html">
+      <created>1590774882718</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590774882718</updated>
+    </task>
+    <task id="LOCAL-00010" summary="final hw27 - оптимизация дублирующихся запосов к базе на странице results.html - искуственно созданный пример. Использована переменная в шаблоне (with)">
+      <created>1590877414746</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590877414747</updated>
+    </task>
+    <task id="LOCAL-00011" summary="final hw26 - подправил ссылку в base.html">
+      <created>1590924552126</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590924552126</updated>
+    </task>
+    <task id="LOCAL-00012" summary="final hw26 - обновил файл &#10;requirements.txt c пом pip freeze &gt; requirements.txt">
+      <created>1590926001552</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1590926001552</updated>
+    </task>
+    <task id="LOCAL-00013" summary="final hw26 - обновил файл &#10;requirements.txt c пом pip freeze &gt; requirements.txt">
+      <created>1590926029742</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590926029742</updated>
+    </task>
+    <task id="LOCAL-00014" summary="final hw26 - заменил f -строки на .format">
+      <created>1590929415824</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590929415824</updated>
+    </task>
+    <task id="LOCAL-00015" summary="final hw26 - изменил формат поля имени в модели с 16 на 32">
+      <created>1590952059791</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590952059791</updated>
+    </task>
+    <task id="LOCAL-00016" summary="final hw26 - изменил формат поля имени в модели с 16 на 32">
+      <created>1590952180437</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1590952180437</updated>
+    </task>
+    <task id="LOCAL-00017" summary="initial hw 30 - прикрутил сервис django-cleanup, притупаем к созданию api">
+      <created>1591041762567</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591041762567</updated>
+    </task>
+    <task id="LOCAL-00018" summary="final hw 30&#10;- прикрутил сервис django-cleanup и библиотеку django-rest-framework&#10;- cоздал файл с зависимостями командой pip freeze &gt; requirements.txt&#10;- добавил стандартный набор api (ViewSet) для тех модели Ico&#10;- добавил поведение на стороне клиента на js: реализовал вывод текущей даты в подвале, в разделе копирайта. Файл js в папке static/js/my.js">
+      <created>1591109072022</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591109072022</updated>
+    </task>
+    <task id="LOCAL-00019" summary="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя&#10;-">
+      <created>1591518403420</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1591518403420</updated>
+    </task>
+    <task id="LOCAL-00020" summary="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя">
+      <created>1591522307465</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1591522307466</updated>
+    </task>
+    <task id="LOCAL-00021" summary="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя&#10;- подправлены шаблоны для эстетики восприятия">
+      <created>1591524855808</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591524855808</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="final hw23 - добавлена новая модель пользователя, аутентификация и права доступа: парсить в базу может только залогиненный пользоавтель, а редактировать и удалять записи только АДМИН!" />
+    <MESSAGE value="final hw24 - Добавлены тесты на бизнес-логику и на вьюшки (коды статуса страниц). Проблема с залогиниванием пользователя." />
+    <MESSAGE value="initial hw24 - Добавлена пагинация." />
+    <MESSAGE value="initial hw26 - добавлена пиганация и фильтр заголовка - &quot;прагающие буквы&quot;, реализованный в виде отдельного приложения" />
+    <MESSAGE value="initial hw26 - добавлена пиганация; создан фильтр заголовка - &quot;прагающие буквы&quot;, реализованный в виде отдельного приложения; добавлен менеджер моделей для активации записей Ico; в модели Ico реализоно вычисление периода действия в днях и выведено на страницы" />
+    <MESSAGE value="final hw26 - добавлена пиганация; создан фильтры capitalize для заголовка на странице results.html и фильтр alfajumper (&quot;прагающие буквы&quot;) для заповедей блаженств - фильтры реализованны в виде отдельного приложения textstylesapp; добавлен менеджер моделей для активации записей Ico; в модели Ico реализоно вычисление периода действия в днях и выведено на страницы; реализовано создание профиля пользователя по событию post_save; реализован контекстный процессор, генерирующий случайным образом одну из заповедей блаженств нагорной проповеди Христа с выводом в подвал базового шаблона base.html" />
+    <MESSAGE value="final hw27 - оптимизация дублирующихся запосов к базе на странице results.html - искуственно созданный пример. Использована переменная в шаблоне (with)" />
+    <MESSAGE value="final hw26 - подправил ссылку в base.html" />
+    <MESSAGE value="final hw26 - обновил файл &#10;requirements.txt c пом pip freeze &gt; requirements.txt" />
+    <MESSAGE value="final hw26 - заменил f -строки на .format" />
+    <MESSAGE value="final hw26 - изменил формат поля имени в модели с 16 на 32" />
+    <MESSAGE value="initial hw 30 - прикрутил сервис django-cleanup, притупаем к созданию api" />
+    <MESSAGE value="final hw 30&#10;- прикрутил сервис django-cleanup и библиотеку django-rest-framework&#10;- cоздал файл с зависимостями командой pip freeze &gt; requirements.txt&#10;- добавил стандартный набор api (ViewSet) для тех модели Ico&#10;- добавил поведение на стороне клиента на js: реализовал вывод текущей даты в подвале, в разделе копирайта. Файл js в папке static/js/my.js" />
+    <MESSAGE value="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя&#10;-" />
+    <MESSAGE value="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя" />
+    <MESSAGE value="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя&#10;- подправлены шаблоны для эстетики восприятия" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial hw 31&#10;- назначены права админу просматривать и добавлять токены&#10;- добавлена авторизация по токену&#10;- добавлена генерация токена на странице пофиля пользователя&#10;- подправлены шаблоны для эстетики восприятия" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="419" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590650410648">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="419" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1304.768@0.0.1304.768" timestamp="1590650410648" />
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590494580542">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1590494580542" />
+    <state x="14" y="0" key="CommitChangelistDialog2" timestamp="1591524853991">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="14" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1591524853991" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1590504123386" />
+    <state width="1283" height="192" key="GridCell.Tab.0.bottom" timestamp="1591517914327">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="192" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1591517914327" />
+    <state width="1283" height="192" key="GridCell.Tab.0.center" timestamp="1591517914327">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="192" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1591517914327" />
+    <state width="1283" height="192" key="GridCell.Tab.0.left" timestamp="1591517914327">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="192" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1591517914327" />
+    <state width="1283" height="192" key="GridCell.Tab.0.right" timestamp="1591517914327">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="192" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1591517914327" />
+    <state x="153" y="27" key="SettingsEditor" timestamp="1590644979892">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="153" y="27" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1590644979892" />
+    <state x="263" y="117" key="Vcs.Push.Dialog.v2" timestamp="1591524860338">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="263" y="117" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1591524860338" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1590506498171" />
+    <state x="347" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1590924333450">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="347" y="208" key="com.intellij.ide.util.TipDialog/0.0.1304.768@0.0.1304.768" timestamp="1590924333450" />
+    <state x="490" y="0" width="814" height="768" key="find.popup" timestamp="1590929331382">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="490" y="0" width="814" height="768" key="find.popup/0.0.1304.768@0.0.1304.768" timestamp="1590929331382" />
+  </component>
+</project>

@@ -14,8 +14,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from rest_framework import routers
+from icoapp.api_views import IcoViewSet
+
+
+router = routers.DefaultRouter()
+router.register(r'icos', IcoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # конструирование путей к вьюшкам по полученным урлам в адресной строке:
+    path('', include('icoapp.urls', namespace='icoapp')),  # "переадресация" на файл urls приложения icoapp
+    # path('users', include('usersapp.urls', namespace='userapp'))  # "переадресация" на файл urls приложения usersapp
+    path('users/', include('usersapp.urls', namespace='users')),  # "переадресация" на файл urls приложения usersapp
+    path('api-auth/', include('rest_framework.urls')),
+    # по этому пути наши Ico будут раздваться в виде API
+    path('api/v0/icos/', include(router.urls)),
 ]
+
+# конструкция для того, чтобы джанго нормально находил папку с media
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

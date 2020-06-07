@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Profile
+{% endblock %}
+
+{% block content %}
+
+  <section id="profile" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <h2 class="text-white mb-5"><strong>Профиль пользователя {{objects.username}}</strong></h2>
+
+    <hr>
+    <div  class="container  text-center text-white-50">
+        &bull; <b>Т О К Е Н</b> &bull;
+        <p id="token" class="text-white">
+            {% if object.auth_token %} {{object.auth_token}} {% else %} не создан... {% endif %}
+        </p>
+        <hr>
+        <form action="{% url 'users:update_token' %}">
+            <button type="submit" class="btn btn-primary">Генератор токена</button>
+        </form>
+        <hr>
+        <button type="submit" id="ajax-btn" class="btn btn-info">Эксклюзивный генератор токена &bull; by ajax</button>
+        <hr>
+    </div>
+
+          <br>
+          <a href="{% url 'icoapp:index' %}" class="btn btn-secondary js-scroll-trigger">На главную</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
