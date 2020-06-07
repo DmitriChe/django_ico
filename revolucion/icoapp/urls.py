@@ -1,8 +1,12 @@
 from django.urls import path
 from icoapp import views  # импортируем вьюшки
-
+from rest_framework import routers
+from .api_views import IcoViewSet
 
 app_name = 'icoapp'
+
+# router = routers.DefaultRouter()
+# router.register(r'icos', IcoViewSet)
 
 # связываем вьюшки с адресами
 urlpatterns = [

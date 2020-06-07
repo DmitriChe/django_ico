@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'usersapp',
     'textstyleapp',
     'rest_framework',
-    # django_cleanup должен быть самым псоледним!
+    'rest_framework.authtoken',
+    # django_cleanup должен быть самым последним!
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -150,6 +151,11 @@ LOGIN_URL = '/users/login/'  # куда направлять на логин, е
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
     ]
 }
