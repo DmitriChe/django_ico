@@ -8,10 +8,16 @@
 
     Профиль пользователя {{objects.username}}
     <hr>
-    Токен: {% if object.auth_token %} {{object.auth_token}} {% else %} не создан... {% endif %}
 
-    <form action="">
+    Токен:
+    <span id="token">
+        {% if object.auth_token %} {{object.auth_token}} {% else %} не создан... {% endif %}
+    </span>
+
+    <form action="{% url 'users:update_token' %}">
         <button type="submit" class="btn btn-primary">Генератор токена</button>
     </form>
+    <hr>
+    <button type="submit" id="ajax-btn" class="btn btn-info">Эксклюзивный генератор токена &bull; by ajax</button>
 
 {% endblock %}
